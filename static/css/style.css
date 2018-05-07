@@ -24,31 +24,45 @@ h2 {
     margin: 0;
 }
 
-header {
-
-}
-
-aside {
+aside section {
     /* top: 0;  */
     background: pink;
     /* position: absolute;
     left: 0; */
     height: 100%;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
 }
 
 .main-content {
     height: 100%;
-    display: flex;
+    /* display: flex; */
+}
+
+.main-content ul a {
+    pointer-events: all;
+    background: hotpink;
 }
 
 .bg-img {
+    position: relative;
+    z-index: -1;
     height: 100%;
     width: 100%;
-    overflow: auto;
+	scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100%);
+    scroll-snap-destination: 100% 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.bg-img section {
+.bg-img > section {
     height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-coordinate: 100% 100%;
 }
 
 .bg-img #section1 {
@@ -61,4 +75,12 @@ aside {
 
 .bg-img #section3 {
     background: grey;
+}
+
+.bg-img-content {
+    width: 50vw;
+    position: absolute;
+    right: -16px;
+    /* background: purple;  HERE GOES BACKGROUND*/
+    height: 100%;
 }
