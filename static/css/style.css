@@ -26,15 +26,16 @@ h2 {
 
 aside section {
     /* top: 0;  */
-    background: pink;
+    background: #0b132b;
     /* position: absolute;
     left: 0; */
     height: 100%;
     position: absolute;
-    width: 50%;
+    width: 55vw;
     left: 0;
     top: 0;
     pointer-events: none;
+    color: #ffffff;
 }
 
 .main-content {
@@ -42,9 +43,25 @@ aside section {
     /* display: flex; */
 }
 
+.main-content ul {
+    list-style-type: none;
+}
+
 .main-content ul a {
     pointer-events: all;
-    background: hotpink;
+    /* color: #ffffff; */
+    text-decoration: none;
+    opacity: 0;
+}
+
+.main-content ul a:hover {
+    opacity: 1;
+    color: pink;
+}
+
+.main-content ul li a.active {
+    opacity: 1;
+    color: pink;
 }
 
 .bg-img {
@@ -59,7 +76,8 @@ aside section {
     overflow-x: hidden;
 }
 
-.bg-img h2 {
+.bg-img h2,
+.bg-img p {
     opacity: 0;
 }
 
@@ -121,7 +139,7 @@ aside section {
 }
 
 .bg-img-content {
-    width: 50vw;
+    width: 45vw;
     position: absolute;
     right: -16px;
     /* background: purple;  HERE GOES BACKGROUND*/

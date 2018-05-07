@@ -53,7 +53,7 @@
     var scrollPixels = 0; // variable to store scroll delta
     var scrollticker; // - don't need to set this in every scroll
 
-    var backgrounds = $(".bg-img section");
+    var backgrounds = $(".bg-img .section-name h2");
     var animatedTexzt = $("aside .animated.up");
 
     $(".bg-img").on("scroll", function(e) {
@@ -75,9 +75,27 @@
         animatedTexzt.each(function(i, el) {
           $(el).removeClass("fadeOutUp");
           $(el).addClass("fadeInUp");
+
         });
 
-      }, 250);
+        backgrounds.each(function(i, el) {
+          $(el).parent().removeClass('active');
+          $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').removeClass('active');
+
+          // The Active Section:
+          if ($(el).offset().top === 0) {
+
+            $('aside h1').html($(this).html()); // change title on the aside
+            $(this).parent().addClass('active'); // add active class to section
+
+            console.log($(this).closest('.section-name').attr('id'));
+
+            $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').addClass('active');
+
+          }
+        });
+
+      }, 150);
 
     });
   }
