@@ -59,6 +59,10 @@ aside section {
     overflow-x: hidden;
 }
 
+.bg-img h2 {
+    opacity: 0;
+}
+
 .bg-img > section {
     height: 100%;
     scroll-snap-align: start;
@@ -66,15 +70,54 @@ aside section {
 }
 
 .bg-img #section1 {
-    background: blue;
+    background: url('/images/afbeelding 1.png');
+    background-repeat: no-repeat;
+}
+
+.bg-img #section1 .bg-img-content {
+    background: url('/images/afbeelding 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-img #section2 {
     background: red;
 }
 
+.bg-img #section2 .bg-img-content {
+    background: url('/images/afbeelding 2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-img #section3 {
     background: grey;
+}
+
+.bg-img #section3 .bg-img-content {
+    background: url('/images/afbeelding 3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img #section4 {
+    background: grey;
+}
+
+.bg-img #section4 .bg-img-content {
+    background: url('/images/afbeelding 4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img #section5 {
+    background: grey;
+}
+
+.bg-img #section5 .bg-img-content {
+    background: url('/images/afbeelding 5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-img-content {

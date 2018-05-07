@@ -54,7 +54,7 @@
     var scrollticker; // - don't need to set this in every scroll
 
     var backgrounds = $(".bg-img section");
-    var animatedTexzt = $("aside .animated");
+    var animatedTexzt = $("aside .animated.up");
 
     $(".bg-img").on("scroll", function(e) {
       // Clear Timeout if one is pending
@@ -69,8 +69,9 @@
       });
 
       scrollticker = window.setTimeout(function() {
-        console.log("SKRRTTTTT", $(".bg-img").scrollTop());
+        // console.log("SKRRTTTTT", $(".bg-img").scrollTop());
 
+        // Fade In From Bottom
         animatedTexzt.each(function(i, el) {
           $(el).removeClass("fadeOutUp");
           $(el).addClass("fadeInUp");
