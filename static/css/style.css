@@ -1,147 +1,317 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    /* overflow: hidden; */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+@font-face {
+  font-family: dopeFont;
+  src: url("/Gloss_And_Bloom.ttf");
 }
 
 body {
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-    font-size: 2em;
-    padding: 0;
-    margin: 0;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+aside p {
+  margin-top: -1.5rem;
+}
+
+aside h1:first-of-type {
+  z-index: 3;
+}
+
+aside .background span {
+  font-family: "dopeFont";
+  font-size: 4.5vw;
+  display: block;
+  position: absolute;
+  top: -3.3rem;
+  left: -2.75rem;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  z-index: 0;
 }
 
 h2 {
-    font-size: 1.5em;
-    padding: 0;
-    margin: 0;
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
 }
 
 aside section {
-    /* top: 0;  */
-    background: #0b132b;
-    /* position: absolute;
+  /* top: 0;  */
+  background: #0b132b;
+  /* position: absolute;
     left: 0; */
-    height: 100%;
-    position: absolute;
-    width: 55vw;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    color: #ffffff;
+  height: 100%;
+  position: absolute;
+  width: 55vw;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  color: #ffffff;
+}
+
+aside section > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-content: flex-end;
+  height: 100%;
+}
+
+aside section > div > div {
+  display: flex;
+  width: 50%;
+  width: 50%;
+  height: 72%;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  position: relative;
 }
 
 .main-content {
-    height: 100%;
-    /* display: flex; */
+  height: 100%;
+  /* display: flex; */
 }
 
 .main-content ul {
-    list-style-type: none;
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
 }
 
-.main-content ul a {
-    pointer-events: all;
-    /* color: #ffffff; */
+.grid {
+    background: url('images/grid.svg');
+}
+
+.line {
+    width: 1rem;
+    height: .2rem;
+    background: #ffffff;
+    margin-right: 1rem;
+}
+
+a {
     text-decoration: none;
-    opacity: 0;
+}
+.main-content ul li {
+    pointer-events: all;
 }
 
-.main-content ul a:hover {
-    opacity: 1;
-    color: pink;
+.main-content ul a span {
+  pointer-events: all;
+  /* color: #ffffff; */
+  text-decoration: none;
+  opacity: 0;
+  transition: 0.25s ease;
 }
 
-.main-content ul li a.active {
-    opacity: 1;
-    color: pink;
+.main-content ul a:hover span {
+  opacity: 1;
+}
+
+.main-content ul a .line {
+    transition: .2s ease;
+}
+
+.main-content ul .active a .line,
+.main-content ul a:hover .line {
+    transform: scale(2, 1);
+    margin-right: 2rem;
+    transform-origin: 0%;
+  }
+
+.main-content ul li.active a span {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.main-content ul li a {
+    display: flex;
+    align-items: center;
 }
 
 .bg-img {
-    position: relative;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-	scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100%);
-    scroll-snap-destination: 100% 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+  position: relative;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-destination: 100% 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .bg-img h2,
 .bg-img p {
-    opacity: 0;
+  opacity: 0;
 }
 
 .bg-img > section {
-    height: 100%;
-    scroll-snap-align: start;
-    scroll-snap-coordinate: 100% 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-coordinate: 100% 100%;
 }
 
 .bg-img #section1 {
-    background: url('/images/afbeelding 1.png');
-    background-repeat: no-repeat;
+  background: url("/images/afbeelding 1.png");
+  background-repeat: no-repeat;
 }
 
 .bg-img #section1 .bg-img-content {
-    background: url('/images/afbeelding 1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("/images/afbeelding 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img #section2 {
-    background: red;
+  background: red;
 }
 
 .bg-img #section2 .bg-img-content {
-    background: url('/images/afbeelding 2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("/images/afbeelding 2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img #section3 {
-    background: grey;
+  background: grey;
 }
 
 .bg-img #section3 .bg-img-content {
-    background: url('/images/afbeelding 3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("/images/afbeelding 3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img #section4 {
-    background: grey;
+  background: grey;
 }
 
 .bg-img #section4 .bg-img-content {
-    background: url('/images/afbeelding 4.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("/images/afbeelding 4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img #section5 {
-    background: grey;
+  background: grey;
 }
 
 .bg-img #section5 .bg-img-content {
-    background: url('/images/afbeelding 5.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("/images/afbeelding 5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-img-content {
-    width: 45vw;
-    position: absolute;
-    right: -16px;
-    /* background: purple;  HERE GOES BACKGROUND*/
-    height: 100%;
+  width: 45vw;
+  position: absolute;
+  right: -16px;
+  /* background: purple;  HERE GOES BACKGROUND*/
+  height: 100%;
+}
+
+.first {
+  animation-delay: 0;
+}
+
+.second {
+  animation-delay: 0.2s;
+}
+
+.third {
+  animation-delay: 0.5s;
+}
+
+.animated.up {
+  animation-duration: 0.4s;
+  transition: ease;
+}
+
+.section2 {
+  color: #13b0cc;
+}
+
+.section1 {
+  color: #df5028;
+}
+
+.section3 {
+  color: #cd1330;
+}
+
+.section4 {
+  color: #ecaf2a;
+}
+
+.section5 {
+  color: #1342af;
+}
+
+.active .line.section1 , 
+li:hover .line.section1 , 
+button.section1 {
+  background: linear-gradient(to right, #df5028, #e47729);
+}
+
+li:hover .line.section2 , 
+.active .line.section2 ,
+button.section2 {
+  background: linear-gradient(to right, #13b0cc, #2b3da3);
+}
+
+li:hover .line.section3 , 
+.active .line.section3 , 
+button.section3 {
+  background: linear-gradient(to right, #ce0a2f, #ca4837);
+}
+
+li:hover .line.section4 , 
+.active .line.section4 , 
+button.section4 {
+  background: linear-gradient(to right, #f68f31, #e2cb23);
+}
+
+li:hover .line.section5 , 
+.active .line.section5 , 
+button.section5 {
+  background: linear-gradient(to right, #011d6e, #266dfb);
+}
+
+aside button {
+  border: 0;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+aside button div {
+  background: url("/images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }

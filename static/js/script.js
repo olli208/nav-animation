@@ -1,4 +1,10 @@
 (function() {
+  var section1 = '#13B0CC'; //blue
+  var section2 = '#DF5028'; //orange
+  var section3 = '#CD1330'; //red
+  var section4 = '#ECAF2A'; // yellow
+  var section5 = '#1342AF'; // blueish
+
   // letterIndicator();
   navScroll();
   scrollAnimate();
@@ -8,29 +14,6 @@
     var rect = el.getBoundingClientRect();
     return { top: rect.top };
   }
-
-  // Check which name section is at the top of the page
-  // function letterIndicator() {
-  //   var sectionBegin = document.querySelectorAll("main section h2");
-  //   var sideNav = document.querySelector("aside");
-
-  //   window.addEventListener("scroll", function(e) {
-  //     for (i = 0; i < sectionBegin.length; i++) {
-  //       var divOffset = offset(sectionBegin[i]);
-  //       var currentLetter = sectionBegin[i].innerHTML;
-
-  //       if (divOffset.top > -100 && divOffset.top <= 50) {
-  //         // console.log(el , 'IS BOVEN');
-
-  //         var letterNav = document.querySelector("aside #nav-" + currentLetter);
-  //         letterNav.className = " nav big";
-  //       } else {
-  //         var letterNav = document.querySelector("aside #nav-" + currentLetter);
-  //         letterNav.className = " nav";
-  //       }
-  //     }
-  //   });
-  // }
 
   // There is a CSS version that works in some browser
   // but it doenst give control to the speed of animation
@@ -75,23 +58,26 @@
         animatedTexzt.each(function(i, el) {
           $(el).removeClass("fadeOutUp");
           $(el).addClass("fadeInUp");
-
         });
 
         backgrounds.each(function(i, el) {
           $(el).parent().removeClass('active');
-          $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').removeClass('active');
+          $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').closest('li').removeClass('active');
 
           // The Active Section:
           if ($(el).offset().top === 0) {
+            console.log( $(this).closest('.section-name').attr('id') );
 
-            $('aside h1').html($(this).html()); // change title on the aside
+            $('aside h1:first-of-type').html($(this).html()); // change title on the aside
+            $('aside h1 span').html($(this).html()); 
+            $('aside h1 span').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
+            $('aside button').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
+
             $(this).parent().addClass('active'); // add active class to section
 
-            console.log($(this).closest('.section-name').attr('id'));
+            // console.log($(this).closest('.section-name').attr('id'));
 
-            $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').addClass('active');
-
+            $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').closest('li').addClass('active');
           }
         });
 
@@ -134,53 +120,5 @@
       }
     }, 1);
   }
-
-  // function Utils() {
-
-  // }
-
-  // Utils.prototype = {
-  //   constructor: Utils,
-  //   isElementInView: function (element, fullyInView) {
-  //     var pageTop = $(window).scrollTop();
-  //     var pageBottom = pageTop + $(window).height();
-  //     var elementTop = $(element).offset().top;
-  //     var elementBottom = elementTop + $(element).height();
-
-  //     if (fullyInView === true) {
-  //       return ((pageTop < elementTop) && (pageBottom > elementBottom));
-  //     } else {
-  //       return ((elementTop   <= pageBottom) && (elementBottom >= pageTop));
-  //     }
-  //   }
-  // };
-
-  // var Utils = new Utils();
-
-  $.fn.extend({
-    animateCss: function(animationName, callback) {
-      var animationEnd = (function(el) {
-        var animations = {
-          animation: "animationend",
-          OAnimation: "oAnimationEnd",
-          MozAnimation: "mozAnimationEnd",
-          WebkitAnimation: "webkitAnimationEnd"
-        };
-
-        for (var t in animations) {
-          if (el.style[t] !== undefined) {
-            return animations[t];
-          }
-        }
-      })(document.createElement("div"));
-
-      this.addClass("animated " + animationName).one(animationEnd, function() {
-        $(this).removeClass("animated " + animationName);
-
-        if (typeof callback === "function") callback();
-      });
-
-      return this;
-    }
-  });
+  
 })();
