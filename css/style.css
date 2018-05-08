@@ -8,7 +8,7 @@ body {
 
 @font-face {
   font-family: dopeFont;
-  src: url("/Gloss_And_Bloom.ttf");
+  src: url("../Gloss_And_Bloom.ttf");
 }
 
 body {
@@ -96,7 +96,13 @@ aside section > div > div {
 }
 
 .grid {
-    background: url('images/grid.svg');
+    background: url("../images./grid.svg");
+    height: 1.5em;
+    width: 1.5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: -.2rem;
+    margin-top: .2rem;
 }
 
 .line {
@@ -170,12 +176,12 @@ a {
 }
 
 .bg-img #section1 {
-  background: url("/images/afbeelding 1.png");
+  background: url("../images/afbeelding1.png");
   background-repeat: no-repeat;
 }
 
 .bg-img #section1 .bg-img-content {
-  background: url("/images/afbeelding 1.png");
+  background: url("../images/afbeelding1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -185,7 +191,7 @@ a {
 }
 
 .bg-img #section2 .bg-img-content {
-  background: url("/images/afbeelding 2.png");
+  background: url("../images/afbeelding2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -195,7 +201,7 @@ a {
 }
 
 .bg-img #section3 .bg-img-content {
-  background: url("/images/afbeelding 3.png");
+  background: url("../images/afbeelding3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -205,7 +211,7 @@ a {
 }
 
 .bg-img #section4 .bg-img-content {
-  background: url("/images/afbeelding 4.png");
+  background: url("../images/afbeelding4.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -215,7 +221,7 @@ a {
 }
 
 .bg-img #section5 .bg-img-content {
-  background: url("/images/afbeelding 5.png");
+  background: url("../images/afbeelding5.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -304,7 +310,7 @@ aside button {
 }
 
 aside button div {
-  background: url("/images/arrow-right.svg");
+  background: url("../images/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
