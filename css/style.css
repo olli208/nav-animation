@@ -25,7 +25,7 @@ h1 {
 }
 
 aside p {
-  margin-top: -1.5rem;
+  margin-top: -.5rem;
 }
 
 aside h1:first-of-type {
@@ -37,8 +37,8 @@ aside .background span {
   font-size: 4.5vw;
   display: block;
   position: absolute;
-  top: -3.3rem;
-  left: -2.75rem;
+  top: -.8em;
+  left: -.5em;
   padding: 0;
   margin: 0;
   white-space: nowrap;
@@ -70,7 +70,7 @@ aside section > div {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  align-content: flex-end;
+  align-items: flex-end;
   height: 100%;
 }
 
@@ -78,10 +78,11 @@ aside section > div > div {
   display: flex;
   width: 50%;
   width: 50%;
-  height: 72%;
+  height: 75%;
   flex-wrap: wrap;
   margin-left: -20px;
   position: relative;
+  /* background: gold; */
 }
 
 .main-content {
@@ -96,7 +97,7 @@ aside section > div > div {
 }
 
 .grid {
-    background: url("../images./grid.svg");
+    background: url("../images/grid.svg");
     height: 1.5em;
     width: 1.5em;
     background-size: cover;
@@ -171,6 +172,7 @@ a {
 
 .bg-img > section {
   height: 100%;
+  width: 100%;
   scroll-snap-align: start;
   scroll-snap-coordinate: 100% 100%;
 }
@@ -186,18 +188,10 @@ a {
   background-size: cover;
 }
 
-.bg-img #section2 {
-  background: red;
-}
-
 .bg-img #section2 .bg-img-content {
   background: url("../images/afbeelding2.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bg-img #section3 {
-  background: grey;
 }
 
 .bg-img #section3 .bg-img-content {
@@ -206,18 +200,10 @@ a {
   background-size: cover;
 }
 
-.bg-img #section4 {
-  background: grey;
-}
-
 .bg-img #section4 .bg-img-content {
   background: url("../images/afbeelding4.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bg-img #section5 {
-  background: grey;
 }
 
 .bg-img #section5 .bg-img-content {
@@ -239,11 +225,11 @@ a {
 }
 
 .second {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 
 .third {
-  animation-delay: 0.5s;
+  animation-delay: 0.55s;
 }
 
 .animated.up {

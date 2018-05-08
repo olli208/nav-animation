@@ -1,11 +1,4 @@
 (function() {
-  var section1 = '#13B0CC'; //blue
-  var section2 = '#DF5028'; //orange
-  var section3 = '#CD1330'; //red
-  var section4 = '#ECAF2A'; // yellow
-  var section5 = '#1342AF'; // blueish
-
-  // letterIndicator();
   navScroll();
   scrollAnimate();
 
