@@ -59,8 +59,6 @@
 
           // The Active Section:
           if ($(el).offset().top === 0) {
-            console.log( $(this).closest('.section-name').attr('id') );
-
             $('aside h1:first-of-type').html($(this).html()); // change title on the aside
             $('aside h1 span').html($(this).html()); 
             $('aside h1 span').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
@@ -72,8 +70,24 @@
 
             $('a[href="#' + $(this).closest('.section-name').attr('id') + '"]').closest('li').addClass('active');
           }
+
         });
 
+        if ($('.section-name').last().offset().top <= -750 ) {
+          console.log('BOTTOM' , $(this));
+
+          // $('.nav a:first-of-type').trigger('click');
+
+          $('a[href="#section1"]').closest('li').addClass('active');
+          $('#section1 .bg-img-content').addClass('active');
+
+          $('aside h1 span').html($('#section1 h2').html()); 
+          $('aside h1 span').attr('class' , 'animated up first fadeInUp section1'); 
+          $('aside button').attr('class' , 'animated up first fadeInUp section1'); 
+
+          $('.main-content').append($('.bg-img'))
+
+        }
       }, 150);
 
     });

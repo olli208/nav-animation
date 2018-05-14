@@ -120,6 +120,7 @@ a {
 }
 .main-content ul li {
     pointer-events: all;
+    width: 15em;
 }
 
 .main-content ul a span {
@@ -165,6 +166,8 @@ a {
   scroll-snap-destination: 100% 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  background: #0b132b;
+  margin-right: -20px;
 }
 
 .bg-img h2,
@@ -177,11 +180,6 @@ a {
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-coordinate: 100% 100%;
-}
-
-.bg-img #section1 {
-  background: url("../images/afbeelding1.png");
-  background-repeat: no-repeat;
 }
 
 .bg-img #section1 .bg-img-content {
@@ -221,6 +219,10 @@ a {
   /* background: purple;  HERE GOES BACKGROUND*/
   height: 100%;
 }
+
+/* .bg-img-content:last-of-type {
+  height: 110vh;
+} */
 
 .first {
   animation-delay: 0;
