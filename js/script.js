@@ -59,8 +59,10 @@
 
           // The Active Section:
           if ($(el).offset().top === 0) {
+            console.log($(this).siblings( "p" ));
             $('aside h1:first-of-type').html($(this).html()); // change title on the aside
             $('aside h1 span').html($(this).html()); 
+            $('aside p').html($(this).siblings( "p" ).html()); 
             $('aside h1 span').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
             $('aside button').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
 
