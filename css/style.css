@@ -186,6 +186,8 @@ a {
   background: url("../images/afbeelding1.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right
+  
 }
 
 .bg-img #section2 .bg-img-content {
@@ -198,6 +200,7 @@ a {
   background: url("../images/afbeelding3.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center 80%;
 }
 
 .bg-img #section4 .bg-img-content {
@@ -210,6 +213,7 @@ a {
   background: url("../images/afbeelding5.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .bg-img-content {
