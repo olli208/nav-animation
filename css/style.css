@@ -530,3 +530,49 @@ aside .second {
    background-repeat: no-repeat;
    border: none;
  }
+
+ .detail {
+  transform: translateX(-100em);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: 500ms;
+ }
+
+ #principles.active {
+  transform: translateX(0);
+  background: url('../images/det/principles.png'); 
+  background-size: cover;
+  background-repeat: no-repeat
+ }
+
+ #visual.active {
+  transform: translateX(0);
+  background: url('../images/det/visual.png'); 
+  background-size: cover;
+  background-repeat: no-repeat
+ }
+
+ #codestandards.active {
+  transform: translateX(0);
+  background: url('../images/det/codestandards.png'); 
+  background-size: cover;
+  background-repeat: no-repeat
+ }
+
+ #components.active {
+  transform: translateX(0);
+  background: url('../images/det/components.png'); 
+  background-size: cover;
+  background-repeat: no-repeat
+ }
+
+ #resources.active {
+  transform: translateX(0);
+  background: url('../images/det/resources.png'); 
+  background-size: cover;
+  background-repeat: no-repeat
+ }

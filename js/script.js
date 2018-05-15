@@ -3,6 +3,17 @@
   scrollAnimate();
   introScroll();
   showGrid();
+  showDetail();
+
+  function showDetail() {
+    $('.round-btn').on('click' , function() {
+      // console.log($(this).attr('href'));
+
+      $('detail.active').removeClass('active');
+      
+      $($(this).attr('href')).addClass('active');
+    })
+  }
 
   function showGrid() {
     $('.grid').on('click' , function() {
@@ -142,6 +153,7 @@ function handleMouseWheelDirection( direction )
             $('aside h1:first-of-type').html($(this).html()); // change title on the aside
             $('aside h1 span').html($(this).html()); 
             $('aside p').html($(this).siblings( "p" ).html()); 
+            $('.round-btn').attr("href", '#' + $(this).html().split(' ').join('').toLowerCase());
             $('aside h1 span').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
             $('aside button').attr('class' , 'animated up first fadeInUp ' +  $(this).closest('.section-name').attr('id')); 
 
@@ -158,7 +170,12 @@ function handleMouseWheelDirection( direction )
           $('a[href="#section1"]').closest('li').addClass('active');
           $('#section1 .bg-img-content').addClass('active');
 
+          $('aside h1:first-of-type').html($('#section1 h2').html()); 
           $('aside h1 span').html($('#section1 h2').html()); 
+          $('aside p').html($('#section1 p').html()); 
+
+          $('.round-btn').attr("href", '#principles');
+
           $('aside h1 span').attr('class', 'animated up first fadeInUp section1'); 
           $('aside button').attr('class', 'animated up first fadeInUp section1'); 
 
