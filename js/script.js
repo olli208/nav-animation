@@ -13,7 +13,7 @@
       })
     })
 
-    $('.closeGrid').on('click' , function() {
+    $('.closeModal').on('click' , function() {
       $('.gridModal').removeClass('active');
     })
 
