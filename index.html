@@ -8,22 +8,84 @@
 
     <title>Nominow</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/bulma.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/da9afc06/animate.min.css">
     <!--[if lt IE 9]>
     <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
-        
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header>
-    </header>
+    <div class="animated intro">
+        <div class="flex">
+            <div class="img">
+                <img src="images/logo.png"/>   
+            </div>
+
+            <p>De Black Panther is de krachtigste user interface van Nominow.
+            <br> Hij verwelkomt jou in zijn leefomgeving.</p>
+            
+            <p><span>Versie nummer 1.0 zomer 2018</span></p>
+
+            <button class="cta">Design system</button>
+
+            <div class="scrollIndicator"><div></div></div>
+        </div>
+    </div>
+
+    <div class="gridModal columns">
+        <!-- <div class="closeModal">
+            <button></button>
+        </div> -->
+        <div class="container">
+            <div class="gridItem animated column" id="gsection1">
+                <a href="#section1">
+                    <h2>Principles</h2>
+                    <p>De leefomgeving van de Black Panther moet voldoen aan bepaalde waarden zodat hij zich helemaal thuis
+                            voelt. Nominow is namelijk betrouwbaar, veilig, gemakkelijk, hulpvaardig & robuust.</p>
+                </a>
+                
+            </div>
+
+            <div class="gridItem animated column" id="gsection2">
+                <a href="#section2"> 
+                    <h2>Visual</h2>
+                    <p>Om de sfeer van Nominow goed over te brengen, begin je bij de visuele stijl. Hier vind je colors, typografie & iconography.</p>
+                </a>
+            </div>
+
+            <div class="gridItem animated column" id="gsection3">
+                <a href="#section3">
+                    <h2>Code Standards</h2>
+                    <p>De richtlijnen voor de code standaarden worden hier besproken. Je vind hier alles over de screensizes
+                            en wat de regels zijn over de verschillende browsers en devices.</p>
+                </a>
+            </div>
+
+            <div class="gridItem animated column" id="gsection4">
+                <a href="#section4">
+                    <h2>Components</h2>
+                    <p>Componenten bestaan uit verschillende onderdelen. In dit hoofdstuk worden de buttons, form controls en
+                            filters besproken.</p>
+                    </a>
+            </div>
+
+            <div class="gridItem animated column" id="gsection5">
+                <a href="#section5">
+                    <h2>Resources</h2>
+                    <p>Om aan de slag te gaan met de Black panther gebruik de resources. Je vind hier het sketch bestand, github
+                            en de icon library.</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
 
     <div class="main-content">
         <aside>
@@ -34,7 +96,8 @@
                         <h1 class="background">
                             <span class="animated up first section1">Principles</span>
                         </h1>
-                        <p class="animated up second">De leefomgeving van de Black Panther moet voldoen aan bepaalde waarden zodat hij zich helemaal thuis voelt. Nominow is namelijk betrouwbaar, veilig, gemakkelijk, hulpvaardig & robuust.</p>
+                        <p class="animated up second">De leefomgeving van de Black Panther moet voldoen aan bepaalde waarden zodat hij zich helemaal thuis
+                            voelt. Nominow is namelijk betrouwbaar, veilig, gemakkelijk, hulpvaardig & robuust.</p>
                         <button class="animated up third section1">
                             <div></div>
                         </button>
@@ -71,9 +134,7 @@
                                 </a>
                             </li>
                             <li class="animated">
-                                <a href="#" class="animated">
-                                    <div class="grid"></div>
-                                </a>
+                                <div class="animated grid"></div>
                             </li>
                         </ul>
 
@@ -88,35 +149,40 @@
             <section class="section-name" id="section1">
                 <div class="bg-img-content">
                     <h2>Principles</h2>
-                    <p>De leefomgeving van de Black Panther moet voldoen aan bepaalde waarden zodat hij zich helemaal thuis voelt. Nominow is namelijk betrouwbaar, veilig, gemakkelijk, hulpvaardig & robuust.</p>
+                    <p>De leefomgeving van de Black Panther moet voldoen aan bepaalde waarden zodat hij zich helemaal thuis
+                        voelt. Nominow is namelijk betrouwbaar, veilig, gemakkelijk, hulpvaardig & robuust.</p>
                 </div>
             </section>
 
             <section class="section-name" id="section2">
                 <div class="bg-img-content">
                     <h2>Visual</h2>
-                    <p>Om de sfeer van Nominow goed over te brengen, begin je bij de visuele stijl. Hier vind je colors, typografie & iconography.</p>
+                    <p>Om de sfeer van Nominow goed over te brengen, begin je bij de visuele stijl. Hier vind je colors, typografie
+                        & iconography.</p>
                 </div>
             </section>
 
             <section class="section-name" id="section3">
                 <div class="bg-img-content">
                     <h2>Code standards</h2>
-                    <p>De richtlijnen voor de code standaarden worden hier besproken. Je vind hier alles over de screensizes en wat de regels zijn over de verschillende browsers en devices.</p>
+                    <p>De richtlijnen voor de code standaarden worden hier besproken. Je vind hier alles over de screensizes
+                        en wat de regels zijn over de verschillende browsers en devices.</p>
                 </div>
             </section>
 
             <section class="section-name" id="section4">
                 <div class="bg-img-content">
                     <h2>Components</h2>
-                    <p>Componenten bestaan uit verschillende onderdelen. In dit hoofdstuk worden de buttons, form controls en filters besproken.</p>
+                    <p>Componenten bestaan uit verschillende onderdelen. In dit hoofdstuk worden de buttons, form controls en
+                        filters besproken.</p>
                 </div>
             </section>
 
             <section class="section-name" id="section5">
                 <div class="bg-img-content">
                     <h2>Resources</h2>
-                    <p>Om aan de slag te gaan met de Black panther gebruik de resources. Je vind hier het sketch bestand, github en de icon library.</p>
+                    <p>Om aan de slag te gaan met de Black panther gebruik de resources. Je vind hier het sketch bestand, github
+                        en de icon library.</p>
                 </div>
             </section>
 

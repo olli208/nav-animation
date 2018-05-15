@@ -1,6 +1,85 @@
 (function() {
   navScroll();
   scrollAnimate();
+  introScroll();
+  showGrid();
+
+  function showGrid() {
+    $('.grid').on('click' , function() {
+      $('.gridModal').addClass('active');
+
+      $('.gridItem').each(function (i , el) {
+        $(el).addClass('fadeInLeft');
+      })
+    })
+
+    $('.closeGrid').on('click' , function() {
+      $('.gridModal').removeClass('active');
+    })
+
+    $('.gridItem').each(function(i ,el) {
+      $(el).on('click' , function() {
+        $('.gridModal').removeClass('active');
+      })
+    })
+  }
+
+
+  function introScroll() {
+    var scrollPixels = 0; // variable to store scroll delta
+    var scrollticker; // - don't need to set this in every scroll
+    
+    document.querySelector('.intro').addEventListener( 'DOMMouseScroll', function( e ) {
+      // detect direction logic
+      handleMouseWheelDirection( detectMouseWheelDirection(e) )
+    });
+  }
+
+  function detectMouseWheelDirection( e )
+{
+    var delta = null,
+        direction = false
+    ;
+    if ( !e ) { // if the event is not provided, we get it from the window object
+        e = window.event;
+    }
+    if ( e.wheelDelta ) { // will work in most cases
+        delta = e.wheelDelta / 60;
+    } else if ( e.detail ) { // fallback for Firefox
+        delta = -e.detail / 2;
+    }
+    if ( delta !== null ) {
+        direction = delta > 0 ? 'up' : 'down';
+    }
+
+    return direction;
+}
+
+function handleMouseWheelDirection( direction )
+{
+
+    var scrollPixels = 0; // variable to store scroll delta
+    var scrollticker; // - don't need to set this in every scroll
+    if ( direction == 'down' ) {
+        // do something, like show the next page
+        console.log('down')
+
+        if (scrollticker) {
+          window.clearTimeout(scrollticker);
+          scrollticker = null;
+        }
+        
+        scrollticker = window.setTimeout(function() {
+          $('.intro').addClass('fadeOutUpBig');
+          $('aside h1 span').attr('class' , 'animated up first fadeInUp section1 special'); 
+          $('aside button').attr('class' , 'animated up first fadeInUp section1 special'); 
+        },500);
+    } else if ( direction == 'up' ) {
+        // do something, like show the previous page
+    } else {
+        // this means the direction of the mouse wheel could not be determined
+    }
+}
 
   // Calculate the ofsett of an element from top
   function offset(el) {
@@ -59,7 +138,7 @@
 
           // The Active Section:
           if ($(el).offset().top === 0) {
-            console.log($(this).siblings( "p" ));
+
             $('aside h1:first-of-type').html($(this).html()); // change title on the aside
             $('aside h1 span').html($(this).html()); 
             $('aside p').html($(this).siblings( "p" ).html()); 
@@ -76,10 +155,6 @@
         });
 
         if ($('.section-name').last().offset().top <= -400 ) {
-          console.log('BOTTOM' , $(this));
-
-          // $('.nav a:first-of-type').trigger('click');
-
           $('a[href="#section1"]').closest('li').addClass('active');
           $('#section1 .bg-img-content').addClass('active');
 
