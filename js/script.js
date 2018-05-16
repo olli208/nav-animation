@@ -12,6 +12,10 @@
       $('detail.active').removeClass('active');
       
       $($(this).attr('href')).addClass('active');
+
+      $('.detail').on('click', function() {
+        $(this).removeClass('active');
+      })
     })
   }
 
@@ -30,8 +34,15 @@
 
     $('.gridItem').each(function(i ,el) {
       $(el).on('click' , function() {
-        $('.gridModal').removeClass('active');
+        // $('.gridModal').removeClass('active');
+        // $('detail.active').removeClass('active');
+      
+        $($(this).find('a').attr('href')).addClass('active');
       })
+    })
+
+    $('.detail').on('click', function() {
+      $(this).removeClass('active');
     })
   }
 
