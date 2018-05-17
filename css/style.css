@@ -472,7 +472,7 @@ aside .second {
   background: url('../images/arrow-right.svg') , linear-gradient(to bottom, #df5028, #e47729);
   background-repeat: no-repeat;
   background-size: 15%, 100%;
-  background-position-x: 9.4em , 0;
+  background-position-x: 9.5em , 0;
   background-position-y: center, center;
   border: 0;
   padding: .9rem 1.5rem;
@@ -513,7 +513,7 @@ aside .second {
 
  header {
    position: absolute;
-   width: 100vw;
+   width: 80vw;
    left: 0;
    top: 0;
    z-index: 99;
@@ -524,15 +524,13 @@ aside .second {
    top: 0;
    right: 0;
    position: absolute;
+   pointer-events: all;
    padding: 1em;
-   height: 5em;
-   width: 5em;
- }
-
- .closeModal button {
+   height: 3.5em;
+   width: 3.5em;
+   z-index: 101;
+   cursor: pointer;
    background: url('../images/close.svg');
-   height: 100%;
-   width: 100%;
    background-size: contain;
    background-repeat: no-repeat;
    border: none;

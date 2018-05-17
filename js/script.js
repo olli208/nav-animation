@@ -43,6 +43,8 @@
 
     $('.detail').on('click', function() {
       $(this).removeClass('active');
+      $('.gridModal').removeClass('active');
+      $('.intro.fadeOutUpBig').removeClass('fadeOutUpBig');
     })
   }
 
