@@ -19,6 +19,10 @@
     })
   }
 
+  $('.cta').on('click', function() {
+    $($(this).attr('href')).addClass('active');
+  })
+
   function showGrid() {
     $('.grid').on('click' , function() {
       $('.gridModal').addClass('active');
