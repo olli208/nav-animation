@@ -374,7 +374,7 @@ aside .second {
 }
 
 .gridModal {
-  transform: translateX(-100em);
+  transform: translateX(-100vw);
   height: 100vh;
   width: 100vw;
   background: #0b132b;
