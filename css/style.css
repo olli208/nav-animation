@@ -44,7 +44,7 @@ aside .background span {
   font-size: 4.5vw;
   display: block;
   position: absolute;
-  top: 0;
+  top: -45px;
   left: -.5em;
   padding: 0;
   margin: 0;
@@ -518,66 +518,4 @@ aside .second {
    top: 0;
    z-index: 99;
    padding: 1em;
- }
-
- .closeModal {
-   top: 0;
-   right: 0;
-   position: absolute;
-   pointer-events: all;
-   padding: 1em;
-   height: 3.5em;
-   width: 3.5em;
-   z-index: 101;
-   cursor: pointer;
-   background: url('../images/close.svg');
-   background-size: contain;
-   background-repeat: no-repeat;
-   border: none;
- }
-
- .detail {
-  transform: translateX(-100vw);
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  transition: 500ms;
- }
-
- #principles.active {
-  transform: translateX(0);
-  background: url('../images/det/principles.png'); 
-  background-size: cover;
-  background-repeat: no-repeat
- }
-
- #visual.active {
-  transform: translateX(0);
-  background: url('../images/det/visual.png'); 
-  background-size: cover;
-  background-repeat: no-repeat
- }
-
- #codestandards.active {
-  transform: translateX(0);
-  background: url('../images/det/codestandards.png'); 
-  background-size: cover;
-  background-repeat: no-repeat
- }
-
- #components.active {
-  transform: translateX(0);
-  background: url('../images/det/components.png'); 
-  background-size: cover;
-  background-repeat: no-repeat
- }
-
- #resources.active {
-  transform: translateX(0);
-  background: url('../images/det/resources.png'); 
-  background-size: cover;
-  background-repeat: no-repeat
  }
