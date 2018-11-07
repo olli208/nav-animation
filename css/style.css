@@ -87,6 +87,7 @@ aside section > div > div {
   height: 75%;
   flex-wrap: wrap;
   position: relative;
+  z-index: 2;
 }
 
 .main-content {
@@ -163,13 +164,15 @@ a {
     align-items: center;
 }
 
+/* scroll snap parent */
 .bg-img {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   height: 100%;
   width: 100%;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: y mandatory;
   scroll-snap-destination: 100% 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -182,6 +185,7 @@ a {
   opacity: 0;
 }
 
+/* scroll snap child */
 .bg-img > section {
   height: 100%;
   width: 100%;
@@ -207,7 +211,6 @@ a {
   background: url("../images/afbeelding3.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 80%;
 }
 
 .bg-img #section4 .bg-img-content {
@@ -227,7 +230,6 @@ a {
   width: 55vw;
   position: absolute;
   right: -16px;
-  /* background: purple;  HERE GOES BACKGROUND*/
   height: 100%;
 }
 
@@ -532,6 +534,16 @@ aside .second {
  }
 
  @media (max-width: 480px) {
+  aside .background span {
+    font-size: 2.5rem;
+    top: -26px;
+    left: -11px;
+  }
+
+  .bg-img-content {
+    right: 0;
+  }
+
   aside section > div {
     height: auto;
   }
@@ -539,6 +551,7 @@ aside .second {
    aside section {
     height: 55%;
     width: 100vw;
+    z-index: 2;
    }
 
    aside section > div > div {
