@@ -41,11 +41,11 @@ aside h1:first-of-type {
 
 aside .background span {
   font-family: "dopeFont";
-  font-size: 4.5vw;
+  font-size: 3rem;
   display: block;
   position: absolute;
-  top: -45px;
-  left: -.5em;
+  top: -32px;
+  left: -20px;
   padding: 0;
   margin: 0;
   white-space: nowrap;
@@ -65,7 +65,7 @@ aside section {
     left: 0; */
   height: 100%;
   position: absolute;
-  width: 55vw;
+  width: 40vw;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -83,17 +83,14 @@ aside section > div {
 
 aside section > div > div {
   display: flex;
-  width: 50%;
+  width: 60%;
   height: 75%;
   flex-wrap: wrap;
-  margin-left: -20px;
   position: relative;
-  /* background: gold; */
 }
 
 .main-content {
   height: 100%;
-  /* display: flex; */
 }
 
 .main-content ul {
@@ -227,7 +224,7 @@ a {
 }
 
 .bg-img-content {
-  width: 45vw;
+  width: 55vw;
   position: absolute;
   right: -16px;
   /* background: purple;  HERE GOES BACKGROUND*/
@@ -316,6 +313,10 @@ aside button {
   width: 2.7rem;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
+  /* transition: all 200ms ease-in; */
+  transition: transform 0.5s ease 0s;
+  pointer-events: all;
 }
 
 aside button div {
@@ -518,4 +519,51 @@ aside .second {
    top: 0;
    z-index: 99;
    padding: 1em;
+ }
+
+ @media (max-width: 840px) {
+  aside section > div > div {
+    width: 70%;
+  }
+
+ aside section {
+    width: 50vw;
+  }
+ }
+
+ @media (max-width: 480px) {
+  aside section > div {
+    height: auto;
+  }
+
+   aside section {
+    height: 55%;
+    width: 100vw;
+   }
+
+   aside section > div > div {
+    width: 80%;
+    margin: 6em 0 0 0;
+  }
+
+  aside section > div {
+    height: 100%;
+  }
+
+  .main-content ul {
+    position: fixed;
+    bottom: 40px;
+  }
+
+  aside .background span {
+    /* top: 0px; */
+  }
+
+  .bg-img-content {
+    width: 100vw;
+  }
+
+  .round-btn {
+    margin-top: -45px;
+  }
  }
